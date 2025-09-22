@@ -1,0 +1,136 @@
+/* ------------------------
+   Estilos generales / Fondo
+------------------------- */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: url("https://media.istockphoto.com/id/1211526766/es/foto/estrellas-espaciales-fondo-negro.webp?b=1&s=170667a&w=0&k=20&c=3xUwsYjC81tmfSeZJpMiUQts7mniccjWtTr8R_YswfE=") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+/* Animación de aparición */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pantalla inicial */
+.pantalla-inicio {
+  margin-top: 100px;
+}
+.titulo {
+  font-size: 3em;
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 30px yellow;
+}
+.subtitulo {
+  font-size: 1.5em;
+  color: gold;
+  margin-top: 10px;
+}
+.mensaje {
+  margin: 20px 0;
+  font-size: 1em;
+  color: white;
+}
+
+.boton {
+  background: transparent;
+  border: 2px solid magenta;
+  color: magenta;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.boton:hover {
+  background: magenta;
+  color: white;
+}
+
+/* Texto blanco fijo que aparece al dar click */
+.mensaje-blanco {
+  margin-top: 50px;
+  font-size: 2em;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+.oculto {
+  display: none;
+}
+
+/* Partículas */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+.particle {
+  position: absolute;
+  background: yellow;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  from { transform: translateY(-20px); opacity: 1; }
+  to { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Flores */
+#flowers {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  z-index: 6;
+}
+.flower {
+  position: relative;
+  width: 80px;
+  height: 150px;
+}
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 80px;
+  background: green;
+  transform: translateX(-50%);
+}
+.center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: yellow;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.petal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+}
+
